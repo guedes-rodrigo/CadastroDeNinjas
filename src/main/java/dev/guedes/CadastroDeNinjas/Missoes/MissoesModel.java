@@ -8,31 +8,31 @@ public class MissoesModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nomeMissao;
-    private String rank;
+    private String nome;
+    private String dificuldade;
 
     public MissoesModel() {
     }
 
-    public MissoesModel(Long id, String nomeMissao, String rank) {
+    public MissoesModel(Long id, String nome, String dificuldade) {
         this.id = id;
-        this.nomeMissao = nomeMissao;
-        this.rank = rank;
+        this.nome = nome;
+        this.dificuldade = dificuldade;
     }
 
-     public String getNomeMissao() {
-        return nomeMissao;
+     public String getNome() {
+        return nome;
     }
 
-    public void setNomeMissao(String nomeMissao) {
-        this.nomeMissao = nomeMissao;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public String getRank() {
-        return rank;
+    public String getDificuldade() {
+        return dificuldade;
     }
 
-    public void setRank(String rank) {
-        this.rank = rank;
+    public void setDificuldade(String dificuldade) {
+        this.dificuldade = dificuldade;
     }
 }
