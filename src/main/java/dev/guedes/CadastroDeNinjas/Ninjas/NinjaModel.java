@@ -1,7 +1,7 @@
-package dev.guedes.CadastroDeNinjas;
+package dev.guedes.CadastroDeNinjas.Ninjas;
 
+import dev.guedes.CadastroDeNinjas.Missoes.MissoesModel;
 import jakarta.persistence.*;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 @Entity
 @Table(name = "tb_cadastro")
@@ -12,6 +12,7 @@ public class NinjaModel {
     private String nome;
     private String email;
     private int idade;
+    private List<MissoesModelModel> missoes;
 
     public NinjaModel() {
     }
