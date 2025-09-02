@@ -1,5 +1,6 @@
 package dev.guedes.CadastroDeNinjas.Missoes;
 
+import dev.guedes.CadastroDeNinjas.Ninjas.NinjaModel;
 import jakarta.persistence.*;
 
 @Entity
@@ -10,6 +11,7 @@ public class MissoesModel {
     private Long id;
     private String nome;
     private String dificuldade;
+    private NinjaModel ninja;
 
     public MissoesModel() {
     }
