@@ -18,7 +18,7 @@ public class MissoesController {
 
     @GetMapping("/listar")
     public String listarMissoes(){
-        return "Mostra todas as missoes!";
+        return "Missões listadas com sucesso!";
     }
 
     @DeleteMapping("/deletar")
