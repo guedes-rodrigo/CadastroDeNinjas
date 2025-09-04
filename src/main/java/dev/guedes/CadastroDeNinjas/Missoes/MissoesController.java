@@ -1,14 +1,29 @@
 package dev.guedes.CadastroDeNinjas.Missoes;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping
+@RequestMapping("missoes")
 public class MissoesController {
-    @GetMapping("/missoes")
-    public String missoes(){
-        return "Essa é a minha missão nesta rota!";
+
+    @PostMapping("/criar")
+    public String criarMissao(){
+        return "Missão criada com sucesso!";
     }
+
+    @PutMapping ("/alterar")
+    public String alterarMissao(){
+        return "Missão alterada com sucesso!";
+    }
+
+    @GetMapping("/listar")
+    public String listarMissoes(){
+        return "Mostra todas as missoes!";
+    }
+
+    @DeleteMapping("/deletar")
+    public String deletarMissao(){
+        return "Missão excluída com sucesso!";
+    }
+
 }
