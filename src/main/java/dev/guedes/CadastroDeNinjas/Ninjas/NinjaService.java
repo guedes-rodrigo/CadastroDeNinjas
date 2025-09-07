@@ -24,18 +24,29 @@ public class NinjaService {
 
     public NinjaModel listarNinjasPorId(Long id) {
         Optional<NinjaModel> ninjaPorId = ninjaRepository.findById(id);
-        return ninjaPorId.orElse( null);
+        return ninjaPorId.orElse(null);
     }
 
     //Adicionar ninja
 
-    public NinjaModel criarNinja(NinjaModel ninja ) {
+    public NinjaModel criarNinja(NinjaModel ninja) {
         return ninjaRepository.save(ninja);
     }
 
     //Deletar ninja por ID
 
     public void deletarNinjaPorId(Long id) {
-       ninjaRepository.deleteById(id);
+        ninjaRepository.deleteById(id);
+    }
+
+    //Atualizar ninja por ID
+
+    public NinjaModel atualizarNinja(Long id, NinjaModel ninjaAtualizado) {
+
+        if (ninjaRepository.existsById(id)) {
+            ninjaAtualizado.setId(id);
+            return ninjaRepository.save(ninjaAtualizado);
+        }
+        return null;
     }
 }
